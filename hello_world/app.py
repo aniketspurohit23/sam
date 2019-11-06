@@ -1,5 +1,5 @@
 import json
-# import pandas as pd
+import pandas as pd
 
 # import requests
 
@@ -37,7 +37,8 @@ def lambda_handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "I am samaritan"
+            "message": "I am samaritan",
+            "msg":pd.__version__
             # "location": ip.text.replace("\n", "")
         }),
     }
