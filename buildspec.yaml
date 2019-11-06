@@ -1,10 +1,13 @@
-version: 0.1
+version: 0.2
 phases:
   install:
     runtime-versions:
       python: 3.7
     commands:
       - aws cloudformation package --template-file template.yaml --s3-bucket aptusrocker23 --output-template-file packaged.yaml
+  pre_build:
+    commands:
+      - python ./tests/unit/test_manual.py
   build:
     commands:
       - echo python --version
