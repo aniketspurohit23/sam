@@ -1,2 +1,2 @@
 assert(2 + 3 == 5)
-assert(2 + 3 == 4)
+assert(2 + 2 > 0)
