@@ -7,7 +7,7 @@ phases:
       - aws cloudformation package --template-file template.yaml --s3-bucket aptusrocker23 --output-template-file packaged.yaml
   pre_build:
     commands:
-      - python -m pip install -r ./sam/hello_world/requirements.txt
+      - pip install -r ./requirements.txt
       - python ./tests/unit/test_manual.py
   build:
     commands:
