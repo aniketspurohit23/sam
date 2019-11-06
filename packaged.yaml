@@ -12,7 +12,7 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aptusrocker23/5f8e33ae99b079c059be3b41bddf70d5
+      CodeUri: s3://aptusrocker23/a740fb030361dd6d0bf5d5ac9ef54512
       Handler: app.lambda_handler
       Runtime: python3.7
       Events:

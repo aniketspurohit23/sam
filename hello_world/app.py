@@ -34,11 +34,12 @@ def lambda_handler(event, context):
 
     #     raise e
     # "location": ip.text.replace("\n", "")
-    
+
     return {
         "statusCode": 200,
         "body": json.dumps({
             "message": "I am samaritan",
-            "msg":pd.__version__
+            "pandas": "Trying to work with pandas",
+            "version":pd.__version__
         })
     }
