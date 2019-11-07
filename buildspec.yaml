@@ -5,7 +5,7 @@ phases:
       python: 3.7
     commands:
       - echo `pwd`
-      - cp -R hello_world/ output/
+      - cp -R . output/
       - pip install -r ./hello_world/requirements.txt -t output
       - echo `python --version` 
   build:
