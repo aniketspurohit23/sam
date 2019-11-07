@@ -5,17 +5,17 @@ phases:
       python: 3.7
     commands:
       - echo `pwd`
-      - echo 'installing libraries in `pwd`'
-      - pip install -r ./hello_world/requirements.txt -t .
+      - pip install -r ./hello_world/requirements.txt -t lib
       - echo `python --version` 
   build:
     commands:
       - echo `python --version`
-      - aws cloudformation package --template-file template.yaml --s3-bucket ${APP_S3_BUCKET} --output-template-file packaged.yaml
+      - aws cloudformation package --template-file template.yaml --s3-bucket aptusrocker23 --output-template-file packaged.yaml
   post_build:
     commands:
       - python ./tests/unit/test_manual.py
 artifacts:
+  base-directory: app
   type: zip
   files:
     - packaged.yaml
