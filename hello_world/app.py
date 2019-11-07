@@ -1,5 +1,6 @@
 import json
-import pandas as pd
+import packages.pandas as pd
+import packages.statsmodels as sm
 import requests
 
 
@@ -39,6 +40,7 @@ def lambda_handler(event, context):
         "body": json.dumps({
             "message": "I am samaritan",
             "pandas": "Trying to work with pandas",
-	        "version":pd.__version__
+	        "version":pd.__version__,
+            "sm_version":sm.__version__
         })
     }
