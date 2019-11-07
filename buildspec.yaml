@@ -5,14 +5,18 @@ phases:
       python: 3.7
     commands:
       - pip install aws-sam-cli
+      - echo `sam --version`
       - sam build      
       - sam package --template-file template.yaml --s3-bucket aptusrocker23 --output-template-file packaged.yaml
   build:
     commands:
-      - echo python --version
+      - echo `python --version`
   post_build:
     commands:
       - python ./tests/unit/test_manual.py
+  completed:
+    commands:
+      - sam deploy --template-file packaged.yaml --stack-name lambda-deployment-test
 artifacts:
   type: zip
   files:
