@@ -21,6 +21,9 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
+            Code:
+              S3Bucket: !Ref ArtifactsBucket
+              S3Key: !Ref LambdaKey
             Path: /hello
             Method: get
       AutoPublishAlias: live
