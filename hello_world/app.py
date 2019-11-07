@@ -1,7 +1,6 @@
 import json
-# import pandas as pd
-
-# import requests
+import pandas as pd
+import requests
 
 
 def lambda_handler(event, context):
@@ -40,6 +39,6 @@ def lambda_handler(event, context):
         "body": json.dumps({
             "message": "I am samaritan",
             "pandas": "Trying to work with pandas",
-	        # "version":pd.__version__
+	        "version":pd.__version__
         })
     }
