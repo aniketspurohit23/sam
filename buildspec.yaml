@@ -5,7 +5,7 @@ phases:
       python: 3.7
     commands:
       - echo `pwd`
-      - pip install -r ./hello_world/requirements.txt -t lib
+      - pip install -r ./hello_world/requirements.txt -t .
       - echo `python --version` 
   build:
     commands:
@@ -15,7 +15,6 @@ phases:
     commands:
       - python ./tests/unit/test_manual.py
 artifacts:
-  base-directory: lib
   type: zip
   files:
     - packaged.yaml
