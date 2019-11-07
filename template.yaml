@@ -31,10 +31,24 @@ Outputs:
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
   HelloWorldApi:
     Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorldFunctionRole.Arn
+    Value: s3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7!Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+  HelloWorls3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7dFunction:
+    Descrips3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7tion: "Hello World Lambda Function ARN"
+    Value: s3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7!GetAtt HelloWorldFunction.Arn
+  HelloWorls3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7dFunctionIamRole:
+    Descrips3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7tion: "Implicit IAM Role created for Hello World function"
+    Value: s3://aptusrocker23/705448dcf34adb5718894e4d9274da62
+      Handler: app.lambda_handler
+      Runtime: python3.7!GetAtt HelloWorldFunctionRole.Arn
