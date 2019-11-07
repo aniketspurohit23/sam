@@ -14,7 +14,6 @@ phases:
   post_build:
     commands:
       - python ./tests/unit/test_manual.py
-      - sam deploy --template-file packaged.yaml --stack-name lambda-deployment-test
 artifacts:
   type: zip
   files:
