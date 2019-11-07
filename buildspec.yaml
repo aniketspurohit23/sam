@@ -16,7 +16,7 @@ phases:
     commands:
       - python ./tests/unit/test_manual.py
 artifacts:
-  base_directory
+  base_directory: output
   type: zip
   files:
     - packaged.yaml
