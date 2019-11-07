@@ -5,7 +5,6 @@ phases:
       python: 3.7
     commands:
       - pip install aws-sam-cli
-      - pip install pandassssssssss
       - sam build      
       - sam package --template-file template.yaml --s3-bucket aptusrocker23 --output-template-file packaged.yaml
   build:
