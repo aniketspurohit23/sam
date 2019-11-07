@@ -1,5 +1,5 @@
 import json
-from .packages import pandas as pd
+import pandas as pd
 # import packages.statsmodels as sm
 import requests
 

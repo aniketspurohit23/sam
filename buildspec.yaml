@@ -6,7 +6,7 @@ phases:
     commands:
       - echo `pwd`
       # - sam build
-      - pip install -r ./hello_world/requirements.txt -t ./hello_world/packages/
+      - pip install -r ./hello_world/requirements.txt -t ./hello_world/
       - echo `python --version`
   build:
     commands:
