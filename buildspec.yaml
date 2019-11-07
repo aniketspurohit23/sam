@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - pip install -r ./hello_world/requirements.txt -t ./libs
+      - pip install -r ./hello_world/requirements.txt -t .
       - echo `python --version` 
   build:
     commands:
